@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 70px;
+}
+
+header {
+    top: 0;
+    padding: 10px 0;
+    width: 100%;
+    background: #2e8bc0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+header h1 {
+    font-family: "Poppins", cursive;
+}
+header div {
+    padding: 15px;
+    width: 40%;
+    color: grey;
+    background: #fff;
+    font-family: "Comfortaa", cursive;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#search-tags {
+    margin: 10px 0 50px 0;
+    padding: 0 10px;
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    font-family: "Comfortaa", cursive;
+}
+#search-tags::-webkit-scrollbar {
+    display: none;
+}
+#search-tags .tag {
+    padding: 7.5px 15px;
+    min-width: 80px;
+    text-align: center;
+    background: #ddd;
+    border-radius: 25px;
+    font-size: 15px;
+    user-select: none;
+}
+
+#news-wrapper {
+    margin: auto;
+    width: 75%;
+    font-family: "Poppins", cursive;
+}
+#news-wrapper .news {
+    margin: 25px 0 10px 0;
+    font-size: 13px;
+}
+#news-wrapper .news img {
+    width: 100%;
+    height: 150px;
+}
+#news-wrapper .news div {
+    width: 100%;
+    height: 150px;
+    background: #eee;
+}
+
+#loader {
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 5px solid transparent;
+    border-top-color: #bbb;
+    border-bottom-color: #bbb;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    animation: load .5s linear infinite;
+}
+
+#search-wrapper {
+    top: 0;
+    padding: 10%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    display: none;
+}
+#search-wrapper input {
+    padding: 10px 15px;
+    width: 70%;
+    background: #eee;
+    border: none;
+    border-bottom: 2px solid #bbb;
+    font-size: 16px;
+    font-family: "Comfortaa", cursive;
+    outline: none;
+}
+
+@keyframes load {
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
